@@ -32,7 +32,18 @@ npx tsc --noEmit
 - **UI Components:** shadcn/ui (New York style)
 - **Icons:** Lucide React + Iconify
 - **Internationalization:** next-intl
+- **Animation:** typewriter-effect
 - **Package Manager:** pnpm (lockfile present)
+
+## Available Pages
+
+- `/` - Home (hero with typewriter effect)
+- `/about` - Personal background and skills
+- `/experience` - Professional experience timeline
+- `/contact` - Contact form and social links
+- `/legal/privacy-policy` - Privacy policy page
+- `/legal/terms-of-service` - Terms of service page
+- `/*` - 404 Not Found page
 
 ## Code Style Guidelines
 
@@ -155,4 +166,6 @@ Components follow shadcn/ui New York style:
 - Cookie consent and Google Analytics integration
 - Theme provider with dark mode support
 - Mobile-first responsive design
+- Typewriter animation on homepage hero
+- Custom Spinner component (not from shadcn/ui)
 - No explicit test framework - add tests if modifying logic
