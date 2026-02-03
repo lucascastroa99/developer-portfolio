@@ -13,12 +13,12 @@ import { useTranslations } from "next-intl";
 
 const RESUME_OPTIONS = {
   enUS: {
-    url: "https://github.com/placeholder/resume-en.pdf",
+    url: "https://github.com/lucascastroa99/curriculum-vitae/raw/main/LucasCastro_FullStackDeveloper_Resume-ENUS_02-02-2026.pdf",
     flag: "circle-flags:us",
     label: "English",
   },
   ptBR: {
-    url: "https://github.com/placeholder/resume-pt.pdf",
+    url: "https://github.com/lucascastroa99/curriculum-vitae/raw/main/LucasCastro_DesenvolvedorFullStack_Curriculo-PTBR_02-02-2026.pdf",
     flag: "circle-flags:br",
     label: "Português",
   },

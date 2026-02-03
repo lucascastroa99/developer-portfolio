@@ -42,6 +42,13 @@
       "theme": "Tema",
       "resume": "Curriculo"
     },
+    "Footer": {
+      "termsOfService": "Termos de Serviço",
+      "privacyPolicy": "Política de Privacidade",
+      "madeWith": "Feito com",
+      "by": "por",
+      "author": "Lucas Castro"
+    },
     "CookieConsent": {
       "title": "Valorizamos sua privacidade",
       "description": "Este website usa cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao clicar em 'Aceitar Tudo', você consente com o uso de cookies. Você pode personalizar suas preferências ou ler mais em nossa",

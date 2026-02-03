@@ -42,6 +42,13 @@
       "theme": "Theme",
       "resume": "Resume"
     },
+    "Footer": {
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "madeWith": "Made with",
+      "by": "by",
+      "author": "Lucas Castro"
+    },
     "CookieConsent": {
       "title": "We value your privacy",
       "description": "This website uses cookies to enhance your browsing experience and analyze site traffic. By clicking 'Accept All', you consent to our use of cookies. You can customize your preferences or read more in our",

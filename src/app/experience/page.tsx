@@ -6,7 +6,8 @@ import {
 } from "@/libraries/shadcn/components/card";
 import { GenerateMetadataProps } from "@/types/GenerateMetadataProps";
 import { Briefcase } from "lucide-react";
-import { DateTime } from "luxon";
+import { differenceInMonths, format, parseISO } from "date-fns";
+import { enUS, ptBR } from "date-fns/locale";
 import { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -195,24 +196,44 @@ export default function ExperiencePage() {
   const locale = useLocale();
   const isEnglish = locale === "en-us";
 
+  const locales: Record<string, typeof enUS> = { "en-us": enUS, "pt-br": ptBR };
+
   const formatDate = (date: string) => {
     if (date === "present") {
       return t("present");
     }
 
-    return DateTime.fromISO(date).setLocale(locale).toFormat("MMM yyyy");
+    return format(parseISO(date), "MMM yyyy", { locale: locales[locale] });
   };
 
   const getDuration = (start: string, end: string) => {
-    const startDate = DateTime.fromISO(start);
-    const endDate = end === "present" ? DateTime.now() : DateTime.fromISO(end);
+    const startDate = parseISO(start);
+    const endDate = end === "present" ? new Date() : parseISO(end);
 
-    return endDate
-      .diff(startDate, ["years", "months"])
-      .plus({ months: 1 })
-      .rescale()
-      .reconfigure({ locale })
-      .toHuman({ unitDisplay: "long" });
+    const totalMonths = differenceInMonths(endDate, startDate) + 1;
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    // Map next-intl locales to Intl.RelativeTimeFormat locales
+    const rtfLocale = locale === "en-us" ? "en-US" : "pt-BR";
+    const rtf = new Intl.RelativeTimeFormat(rtfLocale, {
+      numeric: "auto",
+      style: "long",
+    });
+
+    const parts: string[] = [];
+    if (years > 0) {
+      // Format with relative time formatter and remove the "in" prefix
+      const yearStr = rtf.format(years, "year").replace(/^(in\s+|.*?\s+)?/i, "").trim();
+      parts.push(yearStr);
+    }
+    if (months > 0) {
+      // Format with relative time formatter and remove the "in" prefix
+      const monthStr = rtf.format(months, "month").replace(/^(in\s+|.*?\s+)?/i, "").trim();
+      parts.push(monthStr);
+    }
+
+    return parts.join(", ");
   };
 
   return (
