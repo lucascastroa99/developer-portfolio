@@ -60,7 +60,7 @@ export default function ContactPage() {
   const t = useTranslations("Pages.Contact");
 
   return (
-    <div className="relative flex min-h-[calc(100vh-6rem)] items-center justify-center px-4 py-12 md:py-6">
+    <div className="relative flex flex-1 items-center justify-center px-4 py-12 md:py-6">
       <div className="container mx-auto max-w-6xl 2xl:max-w-7xl">
         <div className="space-y-10 2xl:space-y-12">
           <div className="text-center">

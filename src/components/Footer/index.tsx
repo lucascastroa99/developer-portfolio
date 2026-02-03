@@ -1,4 +1,3 @@
-import { Heart } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -19,7 +18,18 @@ export default function Footer({ pathname }: Readonly<FooterProps>) {
   return (
     <footer className="w-full border-t border-border/40 bg-background py-6">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+            <span>{t("madeWith")}</span>
+            <Link
+              href="https://github.com/lucascastroa99"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground transition-colors hover:text-primary"
+            >
+              {t("author")}
+            </Link>
+          </div>
           <nav className="flex items-center gap-4 text-sm">
             <Link
               href="/legal/terms-of-service"
@@ -34,19 +44,6 @@ export default function Footer({ pathname }: Readonly<FooterProps>) {
               {t("privacyPolicy")}
             </Link>
           </nav>
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>{t("madeWith")}</span>
-            <Heart className="h-4 w-4 fill-red-500 text-red-500" />
-            <span>{t("by")}</span>
-            <Link
-              href="https://github.com/lucascastroa99"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-foreground transition-colors hover:text-primary"
-            >
-              {t("author")}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

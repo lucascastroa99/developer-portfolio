@@ -45,8 +45,7 @@
     "Footer": {
       "termsOfService": "Termos de Serviço",
       "privacyPolicy": "Política de Privacidade",
-      "madeWith": "Feito com",
-      "by": "por",
+      "madeWith": "Feito por",
       "author": "Lucas Castro"
     },
     "CookieConsent": {
@@ -56,7 +55,7 @@
       "and": "e",
       "termsOfService": "Termos de Serviço",
       "acceptAll": "Aceitar Tudo",
-      "rejectAll": "Recusar Tudo",
+      "rejectAll": "Recusar Opcional",
       "customizePreferences": "Personalizar Preferências",
       "preferences": {
         "title": "Preferências de Cookies",

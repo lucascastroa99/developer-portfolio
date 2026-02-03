@@ -24,7 +24,7 @@ export default function HomePage() {
   const t = useTranslations("Pages.Home");
 
   return (
-    <div className="relative flex min-h-[calc(100vh-6rem)] items-center justify-center px-4 py-12 md:py-6">
+    <div className="relative flex flex-1 items-center justify-center px-4 py-12 md:py-6">
       <div className="container mx-auto max-w-6xl 2xl:max-w-7xl">
         <div className="flex flex-col items-center gap-8 md:gap-12 2xl:gap-20">
           <div className="flex flex-col items-center gap-8 md:grid md:grid-cols-2 md:gap-16 2xl:gap-24 md:items-center w-full">
