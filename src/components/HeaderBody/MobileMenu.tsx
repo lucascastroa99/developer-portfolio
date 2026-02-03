@@ -32,7 +32,7 @@ export default function MobileMenu() {
   const t = useTranslations("Components.HeaderBody");
   const pathname = usePathname();
   const locale = useLocale();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
@@ -108,7 +108,7 @@ export default function MobileMenu() {
               <button
                 onClick={() => setTheme("light")}
                 className={`flex items-center justify-center gap-2 px-4 py-3 rounded-md border-2 font-medium transition-all ${
-                  theme === "light"
+                  resolvedTheme === "light"
                     ? "border-primary bg-primary/10 text-primary"
                     : "border-border hover:border-primary hover:bg-secondary"
                 }`}
@@ -119,7 +119,7 @@ export default function MobileMenu() {
               <button
                 onClick={() => setTheme("dark")}
                 className={`flex items-center justify-center gap-2 px-4 py-3 rounded-md border-2 font-medium transition-all ${
-                  theme === "dark"
+                  resolvedTheme === "dark"
                     ? "border-primary bg-primary/10 text-primary"
                     : "border-border hover:border-primary hover:bg-secondary"
                 }`}

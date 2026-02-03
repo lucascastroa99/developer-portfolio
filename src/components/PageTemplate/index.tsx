@@ -17,7 +17,7 @@ export default function PageTemplate({
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <HeaderBody />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 flex flex-col">{children}</main>
       <Footer pathname={pathname} />
     </div>
   );
