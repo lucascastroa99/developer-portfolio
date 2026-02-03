@@ -1,23 +1,34 @@
-# Lucas Castro - Developer Portfolio
+<h1 align="center">👨‍💻 Lucas Castro - Developer Portfolio 👨‍💻</h1>
 
-A modern, bilingual developer portfolio built with Next.js, React, and Tailwind CSS.
+<p align="center">
+  <strong>A modern, bilingual developer portfolio built with Next.js, React, and Tailwind CSS.</strong>
+</p>
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16.1.6-black?logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/React-19.2.4-61DAFB?logo=react" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.1.18-06B6D4?logo=tailwind-css" alt="Tailwind CSS">
+</p>
+
+---
+
+## 📋 Overview
 
 This is a static, responsive portfolio website showcasing professional experience, skills, and contact information. It features full internationalization (English and Portuguese), dark/light theme support, cookie consent management, and Google Analytics integration.
 
-## Features
+## ✨ Features
 
-- **Bilingual Support** - Full i18n with English (en-us) and Portuguese (pt-br) locales using next-intl
-- **Theme System** - Dark and light mode with smooth transitions via next-themes
-- **Typewriter Effect** - Animated typing effect on the homepage hero section
-- **Cookie Consent** - GDPR-compliant cookie consent banner with preference management
-- **Analytics Integration** - Google Analytics with opt-out support
-- **Responsive Design** - Mobile-first approach with Tailwind CSS
-- **SEO Optimized** - Next.js metadata API for proper page titles and descriptions
-- **Accessibility** - Built with shadcn/ui components following best practices
+- 🌐 **Bilingual Support** - Full i18n with English (en-us) and Portuguese (pt-br) locales using next-intl
+- 🎨 **Theme System** - Dark and light mode with smooth transitions via next-themes
+- ⌨️ **Typewriter Effect** - Animated typing effect on the homepage hero section
+- 🍪 **Cookie Consent** - GDPR-compliant cookie consent banner with preference management
+- 📊 **Analytics Integration** - Google Analytics with opt-out support
+- 📱 **Responsive Design** - Mobile-first approach with Tailwind CSS
+- 🔍 **SEO Optimized** - Next.js metadata API for proper page titles and descriptions
+- ♿ **Accessibility** - Built with shadcn/ui components following best practices
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Category | Technology | Version |
 |----------|-----------|---------|
@@ -30,7 +41,7 @@ This is a static, responsive portfolio website showcasing professional experienc
 | Icons | Lucide React | 0.563.0 |
 | Fonts | JetBrains Mono | Google Fonts |
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ├── public/
@@ -69,14 +80,14 @@ This is a static, responsive portfolio website showcasing professional experienc
 └── tsconfig.json         # TypeScript configuration
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Node.js 18+
 - pnpm (recommended) or npm/yarn
 
-### Installation
+### ⚙️ Installation
 
 ```bash
 # Clone the repository
@@ -94,7 +105,7 @@ cp .env.example .env
 pnpm dev
 ```
 
-### Available Scripts
+### ⚡ Available Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -104,13 +115,13 @@ pnpm dev
 | `pnpm lint` | Run ESLint |
 | `npx tsc --noEmit` | Type check without emitting |
 
-### Environment Variables
+### 🔧 Environment Variables
 
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `NEXT_PUBLIC_GA_TAG` | No | Google Analytics tracking ID |
 
-## Component Library
+## 🧩 Component Library
 
 Custom shadcn/ui components (12 total):
 - **Layout**: Card, Sheet, Dialog, Separator
@@ -118,7 +129,7 @@ Custom shadcn/ui components (12 total):
 - **Forms**: Label, Avatar
 - **Custom**: Spinner (custom implementation, not from shadcn)
 
-## Pages
+## 📄 Pages
 
 | Route | Description |
 |-------|-------------|
@@ -129,7 +140,7 @@ Custom shadcn/ui components (12 total):
 | `/legal/privacy-policy` | Privacy policy |
 | `/legal/terms-of-service` | Terms of service |
 
-## Custom Components
+## 🎨 Custom Components
 
 ### TypeWritter
 Animated typing effect component using `typewriter-effect` library. Displays dynamic text on the homepage.
@@ -147,21 +158,23 @@ Responsive navigation including:
 - Language selector (English/Portuguese)
 - Resume download button
 
-## Development Guidelines
+## 📚 Development Guidelines
 
 See [AGENTS.md](./AGENTS.md) for detailed coding standards, component patterns, and architectural decisions.
 
-## Browser Support
+## 🌐 Browser Support
 
 - Chrome 90+
 - Firefox 88+
 - Safari 14+
 - Edge 90+
 
-## License
+## 📜 License
 
 MIT License - see [LICENSE](./LICENSE) for details.
 
 ---
 
-Built with Next.js and deployed on Vercel.
+<p align="center">
+  Built using Next.js and deployed on Vercel.
+</p>
