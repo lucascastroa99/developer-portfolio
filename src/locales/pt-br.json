@@ -1,0 +1,247 @@
+{
+  "Common": {
+    "backToHome": "Voltar ao Início",
+    "lastUpdated": "Última Atualização",
+    "savePreferences": "Salvar Preferências",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "Metadata": {
+    "homePage": {
+      "title": "Início",
+      "description": "Bem-vindo ao meu website pessoal, onde mostro minhas habilidades e experiências como desenvolvedor de software."
+    },
+    "aboutPage": {
+      "title": "Sobre",
+      "description": "Conheça-me melhor, meu background, habilidades e interesses."
+    },
+    "experiencePage": {
+      "title": "Experiência",
+      "description": "Veja a minha experiência profissional e os projetos em que trabalhei."
+    },
+    "contactPage": {
+      "title": "Contato",
+      "description": "Quer entrar em contato ou discutir um projeto? Entre em contato comigo através dessa página."
+    },
+    "privacyPolicy": {
+      "title": "Política de Privacidade",
+      "description": "Saiba como coletamos, usamos e protegemos suas informações pessoais."
+    },
+    "termsOfService": {
+      "title": "Termos de Serviço",
+      "description": "Leia os termos e condições para usar este website."
+    }
+  },
+  "Components": {
+    "HeaderBody": {
+      "home": "Início",
+      "about": "Sobre",
+      "experience": "Experiência",
+      "contact": "Contato",
+      "language": "Idioma",
+      "theme": "Tema",
+      "resume": "Curriculo"
+    },
+    "CookieConsent": {
+      "title": "Valorizamos sua privacidade",
+      "description": "Este website usa cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao clicar em 'Aceitar Tudo', você consente com o uso de cookies. Você pode personalizar suas preferências ou ler mais em nossa",
+      "privacyPolicy": "Política de Privacidade",
+      "and": "e",
+      "termsOfService": "Termos de Serviço",
+      "acceptAll": "Aceitar Tudo",
+      "rejectAll": "Recusar Tudo",
+      "customizePreferences": "Personalizar Preferências",
+      "preferences": {
+        "title": "Preferências de Cookies",
+        "description": "Usamos cookies para fornecer a melhor experiência. Você pode aceitar todos os cookies ou personalizar suas preferências abaixo.",
+        "essential": {
+          "title": "Cookies Essenciais",
+          "description": "Estes cookies são necessários para o funcionamento adequado do website. Eles habilitam funcionalidades essenciais como segurança, gerenciamento de rede e acessibilidade.",
+          "alwaysActive": "Sempre Ativo"
+        },
+        "analytics": {
+          "title": "Cookies de Análise",
+          "description": "Estes cookies nos ajudam a entender como os visitantes interagem com nosso website, coletando e relatando informações de forma anônima.",
+          "enable": "Ativar cookies de análise",
+          "disable": "Desativar cookies de análise",
+          "tools": "Ferramentas",
+          "purpose": "Propósito",
+          "purposeDescription": "Entender o uso do website e melhorar a experiência do usuário"
+        },
+        "cancel": "Cancelar",
+        "savePreferences": "Salvar Preferências"
+      }
+    }
+  },
+  "Pages": {
+    "Home": {
+      "greeting": "Olá, eu sou Lucas Castro",
+      "typing": "E desenvolvo aplicações com",
+      "presentation": "Desenvolvedor Full Stack especializado em tecnologias web modernas. Criação de aplicações escaláveis ​​e de alto desempenho.",
+      "aboutMe": "Sobre mim",
+      "contactMe": "Contate-me"
+    },
+    "About": {
+      "title": "Sobre Mim",
+      "role": "Desenvolvedor Full Stack",
+      "summary": "Desenvolvedor Full Stack com mais de 4 anos de experiência no desenvolvimento de aplicações web robustas usando React, Vue e Angular. Com conhecimento em Node.js, Python e .NET. Atuação em projetos end-to-end, incluindo levantamento de requisitos, testes de desempenho, CI/CD, provas de conceito e otimização de UX/UI. Entrega de soluções de alto impacto com foco em performance e valor para o cliente."
+    },
+    "Experience": {
+      "title": "Experiência Profissional",
+      "present": "Presente",
+      "duration": {
+        "year": "ano",
+        "years": "anos",
+        "month": "mês",
+        "months": "meses"
+      }
+    },
+    "Contact": {
+      "title": "Entre em Contato",
+      "subtitle": "Tem um projeto em mente? Vamos conversar!",
+      "social": "Conecte-se comigo",
+      "info": {
+        "location": "Localização",
+        "availability": "Disponibilidade",
+        "workPreference": "Preferência de Trabalho",
+        "locationValue": "Brasil",
+        "availabilityValue": "Full-time, Part-time e Freelance",
+        "workPreferenceValue": "Remoto, Híbrido e Presencial"
+      }
+    },
+    "PrivacyPolicy": {
+      "title": "Política de Privacidade",
+      "lastUpdated": "Última Atualização",
+      "date": "21 de Dezembro de 2024",
+      "backToHome": "Voltar ao Início",
+      "sections": {
+        "introduction": {
+          "title": "1. Introdução",
+          "content": "Bem-vindo ao website portfolio de Lucas Castro. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso website. Por favor, leia esta política de privacidade cuidadosamente. Se você não concordar com os termos desta política de privacidade, por favor não acesse o site."
+        },
+        "informationCollection": {
+          "title": "2. Informações que Coletamos",
+          "content": "Podemos coletar informações sobre você de várias maneiras. As informações que podemos coletar no site incluem:",
+          "items": [
+            "Dados Pessoais: Quando você entra em contato conosco através do website, podemos solicitar informações de identificação pessoal, como seu nome e endereço de e-mail.",
+            "Dados de Análise: Usamos o Google Analytics para coletar informações sobre seu dispositivo e como você interage com nosso website.",
+            "Cookies: Usamos cookies e tecnologias de rastreamento semelhantes para rastrear atividades em nosso website e armazenar certas informações."
+          ]
+        },
+        "cookies": {
+          "title": "3. Uso de Cookies",
+          "content": "Usamos cookies para melhorar sua experiência em nosso website. Cookies são pequenos arquivos de dados armazenados em seu dispositivo. Usamos os seguintes tipos de cookies:",
+          "types": {
+            "essential": {
+              "title": "Cookies Essenciais",
+              "description": "Estes cookies são necessários para que o website funcione adequadamente e não podem ser desativados."
+            },
+            "analytics": {
+              "title": "Cookies de Análise",
+              "description": "Estes cookies nos ajudam a entender como os visitantes interagem com nosso website, coletando e relatando informações de forma anônima."
+            }
+          }
+        },
+        "googleAnalytics": {
+          "title": "4. Google Analytics",
+          "content": "Usamos o Google Analytics para analisar o uso do website e melhorar nossos serviços. O Google Analytics coleta informações como a frequência com que os usuários visitam o site, quais páginas visitam e quais outros sites usaram antes de vir a este site. Usamos as informações obtidas do Google Analytics apenas para melhorar nosso website.",
+          "optOut": "Você pode desativar o Google Analytics instalando o complemento do navegador de desativação do Google Analytics:",
+          "optOutLink": "Desativação do Google Analytics"
+        },
+        "dataUse": {
+          "title": "5. Uso de Suas Informações",
+          "content": "Podemos usar as informações coletadas de você para:",
+          "purposes": [
+            "Melhorar nosso website e serviços",
+            "Responder aos seus comentários e perguntas",
+            "Analisar o uso e tendências do website"
+          ]
+        },
+        "dataSharing": {
+          "title": "6. Divulgação de Suas Informações",
+          "content": "Não vendemos, trocamos ou transferimos suas informações de identificação pessoal para terceiros. Isso não inclui terceiros confiáveis que nos auxiliam na operação do nosso website ou no atendimento a você, como o Google Analytics, desde que essas partes concordem em manter essas informações confidenciais."
+        },
+        "dataSecurity": {
+          "title": "7. Segurança de Suas Informações",
+          "content": "Usamos medidas de segurança administrativas, técnicas e físicas para ajudar a proteger suas informações pessoais. Embora tenhamos tomado medidas razoáveis para proteger as informações pessoais que você nos fornece, esteja ciente de que nenhuma medida de segurança é perfeita ou impenetrável."
+        },
+        "yourRights": {
+          "title": "8. Seus Direitos de Proteção de Dados",
+          "content": "Dependendo da sua localização, você pode ter os seguintes direitos:",
+          "rights": [
+            "O direito de acesso – Você tem o direito de solicitar cópias de seus dados pessoais.",
+            "O direito de retificação – Você tem o direito de solicitar que corrijamos qualquer informação que você acredite estar incorreta.",
+            "O direito de exclusão – Você tem o direito de solicitar que apaguemos seus dados pessoais, sob certas condições.",
+            "O direito de se opor ao processamento – Você tem o direito de se opor ao nosso processamento de seus dados pessoais, sob certas condições."
+          ]
+        },
+        "thirdPartyLinks": {
+          "title": "9. Websites de Terceiros",
+          "content": "Este website pode conter links para websites de terceiros. Não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas políticas de privacidade."
+        },
+        "changes": {
+          "title": "10. Alterações a Esta Política de Privacidade",
+          "content": "Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre quaisquer alterações publicando a nova Política de Privacidade nesta página e atualizando a data de 'Última Atualização'."
+        },
+        "contact": {
+          "title": "11. Entre em Contato",
+          "content": "Se você tiver dúvidas ou comentários sobre esta Política de Privacidade, entre em contato conosco em:"
+        }
+      }
+    },
+    "TermsOfService": {
+      "title": "Termos de Serviço",
+      "lastUpdated": "Última Atualização",
+      "date": "21 de Dezembro de 2024",
+      "backToHome": "Voltar ao Início",
+      "sections": {
+        "acceptance": {
+          "title": "1. Aceitação dos Termos",
+          "content": "Ao acessar e usar este website, você aceita e concorda em estar vinculado aos termos e disposições deste acordo. Se você não concordar com estes termos, por favor não use este website."
+        },
+        "description": {
+          "title": "2. Descrição do Serviço",
+          "content": "Este website serve como um portfólio pessoal apresentando experiência profissional, habilidades e projetos. O conteúdo é fornecido apenas para fins informativos."
+        },
+        "intellectualProperty": {
+          "title": "3. Direitos de Propriedade Intelectual",
+          "content": "Todo o conteúdo deste website, incluindo, mas não se limitando a textos, gráficos, logotipos, imagens e software, é propriedade de Lucas Castro e está protegido por leis internacionais de direitos autorais. Você não pode reproduzir, distribuir, modificar ou criar obras derivadas de qualquer conteúdo sem permissão expressa por escrito."
+        },
+        "userConduct": {
+          "title": "4. Conduta do Usuário",
+          "content": "Ao usar este website, você concorda em não:",
+          "prohibitions": [
+            "Usar o website para qualquer propósito ilegal ou em violação de qualquer lei local, estadual, nacional ou internacional",
+            "Tentar obter acesso não autorizado a qualquer parte do website ou quaisquer sistemas ou redes conectados ao website",
+            "Interferir ou interromper o website ou servidores ou redes conectados ao website",
+            "Transmitir quaisquer vírus, worms ou qualquer código de natureza destrutiva"
+          ]
+        },
+        "disclaimer": {
+          "title": "5. Isenção de Garantias",
+          "content": "Este website é fornecido 'como está' e 'conforme disponível' sem quaisquer garantias de qualquer tipo, expressas ou implícitas. Não garantimos que o website será ininterrupto, livre de erros ou livre de vírus ou outros componentes prejudiciais."
+        },
+        "limitationLiability": {
+          "title": "6. Limitação de Responsabilidade",
+          "content": "Em nenhuma circunstância Lucas Castro será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, sem limitação, perda de lucros, dados, uso, boa vontade ou outras perdas intangíveis, resultantes do seu acesso ou uso ou incapacidade de acessar ou usar o website."
+        },
+        "externalLinks": {
+          "title": "7. Links Externos",
+          "content": "Este website pode conter links para websites externos que não são fornecidos ou mantidos por Lucas Castro. Por favor, note que não garantimos a precisão, relevância, pontualidade ou completude de qualquer informação nesses websites externos."
+        },
+        "modifications": {
+          "title": "8. Modificações dos Termos",
+          "content": "Reservamos o direito de modificar ou substituir estes Termos de Serviço a qualquer momento. É sua responsabilidade verificar estes Termos periodicamente para alterações. Seu uso continuado do website após a publicação de quaisquer alterações constitui aceitação dessas alterações."
+        },
+        "governingLaw": {
+          "title": "9. Lei Aplicável",
+          "content": "Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem considerar suas disposições sobre conflito de leis."
+        },
+        "contact": {
+          "title": "10. Informações de Contato",
+          "content": "Se você tiver alguma dúvida sobre estes Termos de Serviço, entre em contato conosco em:"
+        }
+      }
+    }
+  }
+}
