@@ -40,13 +40,32 @@
       "contact": "Contato",
       "language": "Idioma",
       "theme": "Tema",
-      "resume": "Curriculo"
+      "resume": "Curriculo",
+      "light": "Claro",
+      "dark": "Escuro",
+      "lightTheme": "Mudar para tema claro",
+      "darkTheme": "Mudar para tema escuro",
+      "openMenu": "Abrir menu",
+      "closeMenu": "Fechar menu",
+      "menuTitle": "Menu"
     },
     "Footer": {
       "termsOfService": "Termos de Serviço",
       "privacyPolicy": "Política de Privacidade",
       "madeWith": "Feito por",
       "author": "Lucas Castro"
+    },
+    "NotFound": {
+      "pageNotFound": "Página não encontrada",
+      "description": "A página ou recurso que você está procurando não existe.",
+      "backToHome": "Voltar para a página inicial"
+    },
+    "Error": {
+      "title": "Algo deu errado!",
+      "description": "Pedimos desculpas pelo inconveniente. Ocorreu um erro inesperado.",
+      "globalDescription": "Pedimos desculpas pelo inconveniente. Ocorreu um erro inesperado e estamos trabalhando para corrigi-lo.",
+      "errorId": "ID do Erro",
+      "tryAgain": "Tentar novamente"
     },
     "CookieConsent": {
       "title": "Valorizamos sua privacidade",

@@ -4,6 +4,7 @@ import {
   CardContent,
   CardHeader,
 } from "@/libraries/shadcn/components/card";
+import { EXPERIENCES } from "@/constants/data";
 import { GenerateMetadataProps } from "@/types/GenerateMetadataProps";
 import { Briefcase } from "lucide-react";
 import { differenceInMonths, format, parseISO } from "date-fns";
@@ -27,170 +28,6 @@ export async function generateMetadata({
   };
 }
 
-const EXPERIENCES = [
-  {
-    company: "Marttech - Desenvolvimento de Software",
-    positionEN: "Mid-level Front-end Developer",
-    positionPT: "Desenvolvedor Front-end Pleno",
-    locationEN: "Toledo, Paraná, Brazil",
-    locationPT: "Toledo, Paraná, Brasil",
-    startDate: "2024-07",
-    endDate: "2025-08",
-    descriptionEN: [
-      "Gathered technical requirements from clients and documented system impacts.",
-      "Prioritized tasks and organized sprints in Azure DevOps.",
-      "Implemented user interfaces in React.js following usability guidelines.",
-      "Developed reusable components with Material UI.",
-      "Optimized MapBox polygon and layer implementations, reducing load time by 80% and memory usage from 6GB to 2GB.",
-      "Refactored parts of the application architecture, addressing performance and usability issues.",
-    ],
-    descriptionPT: [
-      "Levantei requisitos técnicos junto ao cliente e documentei os impactos no sistema.",
-      "Priorizei demandas e organizei sprints no Azure DevOps.",
-      "Implementei interfaces em React.js seguindo diretrizes de usabilidade.",
-      "Desenvolvi componentes reutilizáveis com Material UI.",
-      "Otimizei a implementação de polígonos e camadas no MapBox, reduzindo o tempo de carregamento em 80% e o uso de memória de 6GB para 2GB.",
-      "Refatorei partes da arquitetura da aplicação, corrigindo problemas de desempenho e usabilidade.",
-    ],
-    technologies: [
-      "React.js",
-      "Material UI",
-      "MapBox",
-      "Azure DevOps",
-      "TypeScript",
-    ],
-  },
-  {
-    company: "Ibrowse Consultoria e Informática",
-    positionEN: "Mid-level Development Analyst",
-    positionPT: "Analista de Desenvolvimento Pleno",
-    locationEN: "Porto Alegre, Rio Grande do Sul, Brazil",
-    locationPT: "Porto Alegre, Rio Grande do Sul, Brasil",
-    startDate: "2023-08",
-    endDate: "2024-01",
-    descriptionEN: [
-      "Supported internal and external teams with technical demands.",
-      "Developed and fixed features in Angular applications.",
-      "Defined architecture and design patterns for the application and new modules.",
-      "Configured CI/CD pipelines and managed GitLab repositories.",
-      "Created unit tests using Karma with 77% overall code coverage.",
-      "Reviewed code and tracked deliveries in ClickUp, ensuring compliance with internal standards.",
-    ],
-    descriptionPT: [
-      "Apoiei equipes internas e externas no atendimento de demandas técnicas.",
-      "Desenvolvi e corrigi funcionalidades em aplicações Angular.",
-      "Defini arquitetura e padrões de design para a aplicação e novos módulos.",
-      "Configurei pipelines de CI/CD e administrei repositórios no GitLab.",
-      "Criei testes unitários usando Karma com 77% de cobertura global de código.",
-      "Revisei código e acompanhei entregas no ClickUp, garantindo conformidade com os padrões internos.",
-    ],
-    technologies: [
-      "Angular",
-      "GitLab",
-      "CI/CD",
-      "Karma",
-      "ClickUp",
-      "TypeScript",
-    ],
-  },
-  {
-    company: "INOVA - Polo de Inovação IFAM",
-    positionEN: "Angular Front-end Web Developer",
-    positionPT: "Desenvolvedor Web Front-end Angular",
-    locationEN: "Manaus, Amazonas, Brazil",
-    locationPT: "Manaus, Amazonas, Brasil",
-    startDate: "2023-03",
-    endDate: "2023-07",
-    descriptionEN: [
-      "Refactored outdated Angular pages and components.",
-      "Created new screens and workflows to expand the application.",
-      "Fixed critical bugs reported by end users.",
-      "Mentored three students on technical activities, supervising deliveries and professional development.",
-    ],
-    descriptionPT: [
-      "Refatorei páginas e componentes Angular desatualizados.",
-      "Criei novas telas e fluxos para ampliar a aplicação.",
-      "Corrigi bugs críticos reportados pelos usuários finais.",
-      "Orientei 3 alunos em atividades técnicas, supervisionando entregas e capacitação profissional.",
-    ],
-    technologies: ["Angular", "TypeScript", "Angular Material"],
-  },
-  {
-    company: "ClearSale",
-    positionEN: "Information Technology Analyst",
-    positionPT: "Analista de Tecnologia da Informação",
-    locationEN: "São Paulo, São Paulo, Brazil",
-    locationPT: "São Paulo, São Paulo, Brasil",
-    startDate: "2022-01",
-    endDate: "2022-12",
-    descriptionEN: [
-      "Created interfaces and components in Vue.js.",
-      "Maintained and enhanced features in C# and jQuery.",
-      "Modeled and managed data in SQL Server.",
-      "Documented application workflows for development teams.",
-      "Analyzed production errors and reported moderate failures.",
-      "Developed unit tests to ensure code quality.",
-    ],
-    descriptionPT: [
-      "Criei interfaces e componentes em Vue.js.",
-      "Mantive e evoluí funcionalidades em C# e jQuery.",
-      "Modelei e gerenciei dados no SQL Server.",
-      "Documentei fluxos da aplicação para equipes de desenvolvimento.",
-      "Analisei erros em produção e reportei falhas moderadas.",
-      "Desenvolvi testes unitários para garantir qualidade do código.",
-    ],
-    technologies: ["Vue.js", "C#", "jQuery", "SQL Server"],
-  },
-  {
-    company: "INOVA - Polo de Inovação IFAM",
-    positionEN: "Angular Front-end Web Developer",
-    positionPT: "Desenvolvedor Web Front-end Angular",
-    locationEN: "Manaus, Amazonas, Brazil",
-    locationPT: "Manaus, Amazonas, Brasil",
-    startDate: "2021-09",
-    endDate: "2022-03",
-    descriptionEN: [
-      "Developed screens and components in Angular.",
-      "Improved application design and layout with Angular Material.",
-      "Analyzed visual errors and corrected UI/UX inconsistencies.",
-      "Collaborated with back-end team to align integrations.",
-    ],
-    descriptionPT: [
-      "Desenvolvi telas e componentes em Angular.",
-      "Melhorei design e layout da aplicação com Angular Material.",
-      "Analisei erros visuais e corrigi inconsistências de UI/UX.",
-      "Colaborei com equipe de back-end para alinhar integrações.",
-    ],
-    technologies: ["Angular", "Angular Material", "TypeScript"],
-  },
-  {
-    company: "BeeApp",
-    positionEN: "Vue Front-end Web Developer",
-    positionPT: "Desenvolvedor Web Front-end Vue",
-    locationEN: "Primavera do Leste, Mato Grosso, Brazil",
-    locationPT: "Primavera do Leste, Mato Grosso, Brasil",
-    startDate: "2021-10",
-    endDate: "2021-12",
-    descriptionEN: [
-      "Created modular Vue.js components using Vuetify.",
-      "Adapted pages for mobile devices, ensuring responsiveness.",
-      "Migrated legacy PHP systems to Vue.js.",
-      "Developed SSR with Nuxt, increasing Lighthouse SEO score from 65 to 80.",
-      "Modeled front-end architecture for a new project.",
-      "Configured UI libraries to standardize the application.",
-    ],
-    descriptionPT: [
-      "Criei componentes Vue.js modulares usando Vuetify.",
-      "Adaptei páginas para dispositivos mobile, garantindo responsividade.",
-      "Migrei sistemas legados de PHP para Vue.js.",
-      "Desenvolvi SSR com Nuxt, aumentando nota de SEO no Lighthouse de 65 para 80.",
-      "Modelei a arquitetura de front-end para o novo projeto.",
-      "Configurei bibliotecas de UI para padronizar a aplicação.",
-    ],
-    technologies: ["Vue.js", "Vuetify", "Nuxt.js", "PHP"],
-  },
-];
-
 export default function ExperiencePage() {
   const t = useTranslations("Pages.Experience");
   const locale = useLocale();
@@ -203,37 +40,45 @@ export default function ExperiencePage() {
       return t("present");
     }
 
-    return format(parseISO(date), "MMM yyyy", { locale: locales[locale] });
+    try {
+      return format(parseISO(date), "MMM yyyy", { locale: locales[locale] });
+    } catch {
+      return date;
+    }
   };
 
   const getDuration = (start: string, end: string) => {
-    const startDate = parseISO(start);
-    const endDate = end === "present" ? new Date() : parseISO(end);
+    try {
+      const startDate = parseISO(start);
+      const endDate = end === "present" ? new Date() : parseISO(end);
 
-    const totalMonths = differenceInMonths(endDate, startDate) + 1;
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
+      const totalMonths = differenceInMonths(endDate, startDate) + 1;
+      const years = Math.floor(totalMonths / 12);
+      const months = totalMonths % 12;
 
-    // Map next-intl locales to Intl.RelativeTimeFormat locales
-    const rtfLocale = locale === "en-us" ? "en-US" : "pt-BR";
-    const rtf = new Intl.RelativeTimeFormat(rtfLocale, {
-      numeric: "auto",
-      style: "long",
-    });
+      // Map next-intl locales to Intl.RelativeTimeFormat locales
+      const rtfLocale = locale === "en-us" ? "en-US" : "pt-BR";
+      const rtf = new Intl.RelativeTimeFormat(rtfLocale, {
+        numeric: "auto",
+        style: "long",
+      });
 
-    const parts: string[] = [];
-    if (years > 0) {
-      // Format with relative time formatter and remove the "in" prefix
-      const yearStr = rtf.format(years, "year").replace(/^(in\s+|.*?\s+)?/i, "").trim();
-      parts.push(yearStr);
+      const parts: string[] = [];
+      if (years > 0) {
+        // Format with relative time formatter and remove the "in" prefix
+        const yearStr = rtf.format(years, "year").replace(/^(in\s+|.*?\s+)?/i, "").trim();
+        parts.push(yearStr);
+      }
+      if (months > 0) {
+        // Format with relative time formatter and remove the "in" prefix
+        const monthStr = rtf.format(months, "month").replace(/^(in\s+|.*?\s+)?/i, "").trim();
+        parts.push(monthStr);
+      }
+
+      return parts.join(", ");
+    } catch {
+      return "";
     }
-    if (months > 0) {
-      // Format with relative time formatter and remove the "in" prefix
-      const monthStr = rtf.format(months, "month").replace(/^(in\s+|.*?\s+)?/i, "").trim();
-      parts.push(monthStr);
-    }
-
-    return parts.join(", ");
   };
 
   return (

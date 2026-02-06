@@ -62,24 +62,36 @@ export default function CookieConsent() {
   }, []);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (consent) {
-      const savedPreferences = JSON.parse(consent) as ConsentPreferences;
-      Promise.resolve().then(() => {
-        setPreferences(savedPreferences);
-        updateGoogleConsent(savedPreferences);
-      });
-    } else {
+    try {
+      const consent = localStorage.getItem("cookie-consent");
+      if (consent) {
+        const savedPreferences = JSON.parse(consent) as ConsentPreferences;
+        Promise.resolve().then(() => {
+          setPreferences(savedPreferences);
+          updateGoogleConsent(savedPreferences);
+        });
+      } else {
+        setTimeout(() => setShowBanner(true), 1000);
+      }
+    } catch {
+      // If localStorage is corrupted or unavailable, show banner
       setTimeout(() => setShowBanner(true), 1000);
     }
   }, [updateGoogleConsent]);
 
   const savePreferences = useCallback(
     (prefs: ConsentPreferences) => {
-      localStorage.setItem("cookie-consent", JSON.stringify(prefs));
-      setPreferences(prefs);
-      updateGoogleConsent(prefs);
-      setShowBanner(false);
+      try {
+        localStorage.setItem("cookie-consent", JSON.stringify(prefs));
+        setPreferences(prefs);
+        updateGoogleConsent(prefs);
+        setShowBanner(false);
+      } catch {
+        // If localStorage fails, just update state without persisting
+        setPreferences(prefs);
+        updateGoogleConsent(prefs);
+        setShowBanner(false);
+      }
     },
     [updateGoogleConsent]
   );

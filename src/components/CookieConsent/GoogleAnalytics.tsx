@@ -16,26 +16,25 @@ export default function GoogleAnalytics({ gaId }: Readonly<GoogleAnalyticsProps>
       <Script
         id="google-analytics-config"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-            gtag('consent', 'default', {
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied',
-              'analytics_storage': 'denied',
-              'wait_for_update': 500
-            });
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
+          });
 
-            gtag('config', '${gaId}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
+          gtag('config', '${gaId}', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
     </>
   );
 }

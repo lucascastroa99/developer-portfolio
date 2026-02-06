@@ -12,23 +12,18 @@ import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-interface ThemeSelectorProps {
-  onClick?: () => void;
-}
-
-export default function ThemeSelector({
-  onClick,
-}: Readonly<ThemeSelectorProps>) {
+export default function ThemeSelector() {
   const t = useTranslations("Components.HeaderBody");
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     requestAnimationFrame(() => setMounted(true));
   }, []);
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" aria-label="Theme">
+      <Button variant="ghost" size="icon" aria-label={t("theme")}>
         <Spinner className="text-muted-foreground" />
       </Button>
     );
@@ -42,8 +37,8 @@ export default function ThemeSelector({
           size="icon"
           onClick={() => {
             setTheme(resolvedTheme === "dark" ? "light" : "dark");
-            onClick?.();
           }}
+          aria-label={t("theme")}
         >
           {resolvedTheme === "dark" ? (
             <Sun className="h-5 w-5" />

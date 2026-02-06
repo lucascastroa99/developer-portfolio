@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/libraries/shadcn/components/sheet";
+import { LANGUAGES_ARRAY, NAV_ITEMS } from "@/constants/navigation";
 import { Icon } from "@iconify-icon/react";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
@@ -15,18 +16,6 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
-
-const NAV_ITEMS = [
-  { href: "/", localeKey: "home" },
-  { href: "/about", localeKey: "about" },
-  { href: "/experience", localeKey: "experience" },
-  { href: "/contact", localeKey: "contact" },
-];
-
-const LANGUAGES = [
-  { code: "en-us", name: "English", flag: "circle-flags:us" },
-  { code: "pt-br", name: "Português", flag: "circle-flags:br" },
-];
 
 export default function MobileMenu() {
   const t = useTranslations("Components.HeaderBody");
@@ -38,7 +27,7 @@ export default function MobileMenu() {
 
   const handleLanguageChange = (newLocale: string) => {
     startTransition(() => {
-      document.cookie = `locale=${newLocale}; path=/; max-age=31536000`;
+      document.cookie = `locale=${newLocale}; path=/; max-age=31536000; Secure; SameSite=Strict`;
       globalThis.location.reload();
     });
   };
@@ -46,14 +35,19 @@ export default function MobileMenu() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="md:hidden"
+          aria-label={open ? t("closeMenu") : t("openMenu")}
+        >
           <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">{open ? t("closeMenu") : t("openMenu")}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-75 sm:w-100 flex flex-col">
         <SheetHeader>
-          <SheetTitle className="text-2xl">Menu</SheetTitle>
+          <SheetTitle className="text-2xl">{t("menuTitle")}</SheetTitle>
         </SheetHeader>
 
         <nav className="flex flex-col gap-4 mt-8 flex-1">
@@ -82,7 +76,7 @@ export default function MobileMenu() {
               {t("language")}
             </p>
             <div className="grid grid-cols-2 gap-2">
-              {LANGUAGES.map((lang) => (
+              {LANGUAGES_ARRAY.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => handleLanguageChange(lang.code)}
@@ -112,9 +106,10 @@ export default function MobileMenu() {
                     ? "border-primary bg-primary/10 text-primary"
                     : "border-border hover:border-primary hover:bg-secondary"
                 }`}
+                aria-label={t("lightTheme")}
               >
                 <Sun className="h-5 w-5" />
-                <span className="text-sm">Light</span>
+                <span className="text-sm">{t("light")}</span>
               </button>
               <button
                 onClick={() => setTheme("dark")}
@@ -123,9 +118,10 @@ export default function MobileMenu() {
                     ? "border-primary bg-primary/10 text-primary"
                     : "border-border hover:border-primary hover:bg-secondary"
                 }`}
+                aria-label={t("darkTheme")}
               >
                 <Moon className="h-5 w-5" />
-                <span className="text-sm">Dark</span>
+                <span className="text-sm">{t("dark")}</span>
               </button>
             </div>
           </div>

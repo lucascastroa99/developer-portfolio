@@ -1,14 +1,12 @@
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const LEGAL_PAGES = ["/legal/terms-of-service", "/legal/privacy-policy"];
 
-interface FooterProps {
-  pathname?: string;
-}
-
-export default function Footer({ pathname }: Readonly<FooterProps>) {
+export default function Footer() {
   const t = useTranslations("Components.Footer");
+  const pathname = usePathname();
   const isLegalPage = pathname && LEGAL_PAGES.some((page) => pathname.startsWith(page));
 
   if (isLegalPage) {

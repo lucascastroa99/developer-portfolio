@@ -1,15 +1,9 @@
 "use client";
 
+import { NAV_ITEMS } from "@/constants/navigation";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const NAVIGATION_ITEMS = [
-  { href: "/", localeKey: "home" },
-  { href: "/about", localeKey: "about" },
-  { href: "/experience", localeKey: "experience" },
-  { href: "/contact", localeKey: "contact" },
-];
 
 export default function NavigationLinks() {
   const t = useTranslations("Components.HeaderBody");
@@ -17,7 +11,7 @@ export default function NavigationLinks() {
 
   return (
     <nav className="flex items-center gap-1">
-      {NAVIGATION_ITEMS.map((item) => {
+      {NAV_ITEMS.map((item) => {
         const isActive = pathname === item.href;
         return (
           <Link

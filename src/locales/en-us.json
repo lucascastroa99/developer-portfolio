@@ -40,13 +40,32 @@
       "contact": "Contact",
       "language": "Language",
       "theme": "Theme",
-      "resume": "Resume"
+      "resume": "Resume",
+      "light": "Light",
+      "dark": "Dark",
+      "lightTheme": "Switch to light theme",
+      "darkTheme": "Switch to dark theme",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "menuTitle": "Menu"
     },
     "Footer": {
       "termsOfService": "Terms of Service",
       "privacyPolicy": "Privacy Policy",
       "madeWith": "Made by",
       "author": "Lucas Castro"
+    },
+    "NotFound": {
+      "pageNotFound": "Page not found",
+      "description": "The page or resource you are looking for does not exist.",
+      "backToHome": "Go back to homepage"
+    },
+    "Error": {
+      "title": "Something went wrong!",
+      "description": "We apologize for the inconvenience. An unexpected error has occurred.",
+      "globalDescription": "We apologize for the inconvenience. An unexpected error has occurred and we are working to fix it.",
+      "errorId": "Error ID",
+      "tryAgain": "Try again"
     },
     "CookieConsent": {
       "title": "We value your privacy",

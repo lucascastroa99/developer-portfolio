@@ -12,21 +12,11 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/libraries/shadcn/components/tooltip";
+import { LANGUAGES_OPTIONS } from "@/constants/navigation";
 import { Icon } from "@iconify-icon/react";
 import { Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
-
-const LANGUAGES_OPTIONS = {
-  "en-us": {
-    name: "English",
-    flag: "circle-flags:us",
-  },
-  "pt-br": {
-    name: "Português",
-    flag: "circle-flags:br",
-  },
-};
 
 export default function LanguageSelector() {
   const t = useTranslations("Components.HeaderBody");
@@ -35,7 +25,7 @@ export default function LanguageSelector() {
 
   const handleLanguageChange = (newLocale: string) => {
     startTransition(() => {
-      document.cookie = `locale=${newLocale}; path=/; max-age=31536000`;
+      document.cookie = `locale=${newLocale}; path=/; max-age=31536000; Secure; SameSite=Strict`;
       globalThis.location.reload();
     });
   };
@@ -45,7 +35,7 @@ export default function LanguageSelector() {
       <Tooltip>
         <TooltipTrigger asChild>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" disabled={isPending}>
+            <Button variant="ghost" size="icon" disabled={isPending} aria-label={t("language")}>
               <Languages className="h-5 w-5" />
             </Button>
           </DropdownMenuTrigger>
